@@ -1,0 +1,22 @@
+server:
+  port: 0
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:29092
+    consumer:
+      group-id: "group-1"
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    topic:
+#      send-order: cdr-records
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/brt
+    username: postgres
+    password: postgres
+
+  application.name: eureka-client-brt
+
+eureka.client.service-url: { http://localhost:8081/eureka }

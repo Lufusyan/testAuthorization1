@@ -1,0 +1,6 @@
+bucket: transactions
+billing_period_in_months: 2 # для тестов
+billable_year: 2024
+records_per_file: 10
+file_format: .txt
+max_number_of_calls_per_month: 30 # для тестов

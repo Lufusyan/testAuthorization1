@@ -1,0 +1,28 @@
+server:
+  port: 0
+
+spring:
+  profiles:
+    active: dev
+
+  kafka:
+    bootstrap-servers: localhost:29092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/cdr
+    username: postgres
+    password: postgres
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  application.name: eureka-client-cdr
+
+eureka.client.service-url: { http://localhost:8081/eureka }
+
+
